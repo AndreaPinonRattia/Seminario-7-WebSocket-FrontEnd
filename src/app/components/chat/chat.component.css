@@ -1,0 +1,133 @@
+/* Estilo general del contenedor de la ventana del chat */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Estilo para la cabecera del chat */
+.chat-header {
+    padding: 10px;
+    background-color: #0078D4;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    border-bottom: 1px solid #005a9e;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1; /* Esto permite que crezca y se mantenga en el espacio disponible */
+    justify-content: flex-start; 
+}
+
+  /* Estilo para cada mensaje */
+.message {
+    padding: 8px 12px;
+    margin: 10px 0;
+    max-width: 80%;
+    border-radius: 15px;
+    font-size: 0.9em;
+    position: relative;
+}
+
+
+  
+  .message-receive {
+    align-self: flex-start; /* Alinea a la izquierda */
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+  }
+  
+  .message-send {
+    align-self: flex-end; /* Alinea a la derecha */
+    background-color: #007bff; /* Color de fondo para los mensajes enviados */
+    color: white; /* Color del texto */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+  }
+
+
+
+/* Mensaje recibido */
+.message.received {
+    background-color: #eee;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+/* Estilo para la barra de entrada de texto */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+
+/* Campo de texto */
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 0.9em;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Cambiar el color del borde cuando el campo está activo */
+.chat-input input[type="text"]:focus {
+    border-color: #0078D4;
+}
+
+/* Botón de enviar */
+.chat-input button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Cambiar color del botón al pasar el mouse */
+.chat-input button:hover {
+    background-color: #005a9e;
+}
+
+/* Estilo de scrollbar personalizado para la ventana de mensajes */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
